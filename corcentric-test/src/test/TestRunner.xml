@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Test Suite">
+    <test name="verify Chapterone Text">
+        <classes>
+            <class name="testng.Test_Cases" />
+        </classes>
+    </test>
+</suite>
