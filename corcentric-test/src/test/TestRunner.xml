@@ -3,7 +3,7 @@
 <suite name="Test Suite">
     <test name="verify Chapterone Text">
         <classes>
-            <class name="testng.Test_Cases" />
+            <class name="com.corcentric.testCases.TestCorcentric" />
         </classes>
     </test>
 </suite>

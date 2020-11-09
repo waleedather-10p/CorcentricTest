@@ -1,4 +1,4 @@
-package page_objects;
+package com.corcentric.pageClasses;
 
 import org.openqa.selenium.By;
 

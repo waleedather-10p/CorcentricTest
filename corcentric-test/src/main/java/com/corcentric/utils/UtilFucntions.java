@@ -1,27 +1,28 @@
-package utils;
+package com.corcentric.utils;
 
-import driver.Config;
-import driver.Driver_Factory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Util_fucntions extends Driver_Factory{
+import com.corcentric.driver.Config;
+import com.corcentric.driver.DriverFactory;
+
+public class UtilFucntions extends DriverFactory{
 
 	public WebDriver driver;
 
-    public Util_fucntions() {
-        driver = get_chromne_driver();
+    public UtilFucntions() {
+        driver = getChromnedriver();
     }
 
-    public void open_url() {
+    public void openUrl() {
     	driver.get(Config.url);
     }
     
     public boolean click(By locator) {
-        WebElement element = if_element_visible(locator, Config.wait_time);
+        WebElement element = ifElementvisible(locator, Config.wait_time);
 
         if (element == null) {
             return false;
@@ -33,7 +34,7 @@ public class Util_fucntions extends Driver_Factory{
 
     public String getText(By locator) {
 
-        WebElement element = if_element_visible(locator, Config.wait_time);
+        WebElement element = ifElementvisible(locator, Config.wait_time);
 
         if (element == null) {
             return null;
@@ -42,7 +43,7 @@ public class Util_fucntions extends Driver_Factory{
         return element.getText();
     }
 
-    public WebElement if_element_visible(By locator, int time) {
+    public WebElement ifElementvisible(By locator, int time) {
         WebDriverWait wait = new WebDriverWait(driver, time);
         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }

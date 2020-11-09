@@ -1,4 +1,4 @@
-package driver;
+package com.corcentric.driver;
 
 public class Config {
 	 public static String url = "http://book.theautomatedtester.co.uk/";
